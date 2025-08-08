@@ -2,14 +2,12 @@
 
 (require racket/date)
 
+(provide debug-event-logger-enabled debug-responses-enabled debug-log debug-type)
+
 ;; Debug flag parameters
 (define debug-event-logger-enabled (make-parameter #t))
 (define debug-responses-enabled (make-parameter #t))
 
-(provide debug-event-logger-enabled debug-responses-enabled debug-log)
-
-
-;; debug-type: formats the debug type tag
 
 (define (debug-type type)
   (format "[DEBUG: ~a]" type))
@@ -29,5 +27,3 @@
     (newline)
     (newline)
     (flush-output)))
-
-(provide debug-type)
