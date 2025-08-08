@@ -2,6 +2,7 @@
 #lang racket
 
 (require "main.rkt")
+;;(require cordian)
 
 (define bot-client
   (bot #:startup-message #( "Hello! Welcome to the example bot for Cordian"
@@ -259,13 +260,13 @@
      (let loop ([i 0])
        (with-handlers ([exn:fail? (lambda (e) (printf "[HEARTBEAT ERROR] ~a\n" e))])
          (respond (vector-ref still-alive-lyrics i) #:client client #:channel channel-id)
-         (sleep 60))
+         (sleep 3600))
        (loop (modulo (add1 i) (vector-length still-alive-lyrics)))))))
 
 
 
 
-(start-heartbeat bot-client "1403137124697509928") ;; #heart channel ID
+(start-heartbeat bot-client "1403469527559438386") ;; #heart channel ID
 
 
 (debug-log "BOT" "Starting bot client...")
