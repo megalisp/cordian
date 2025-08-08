@@ -14,8 +14,6 @@
 
 (provide start-event-logger on-event)
 
-;; Catch-all event logger for diagnostics
-
 ;; Stub for channel name lookup (replace with real implementation)
 (define (channel-name-by-id client channel-id)
   (string-append "#channel-" (if channel-id (format "~a" channel-id) "unknown")))
@@ -98,8 +96,6 @@
   (if rule
       (apply format (second rule) (apply (third rule) (list client payload)))
       (format "payload: ~s" (rselect payload (take (rkeys payload) 5)))))
-
-(require "debug.rkt")
 
 (define (start-event-logger client)
   (for ([evt (list 'raw-ready 'raw-message-create 'raw-message-update 'raw-message-delete
