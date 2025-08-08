@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_res/logo.png" alt="CORDIAN Logo">
+  <img src="_res/banner.png" alt="CORDIAN Banner">
 </p>
 
 <h1 align="center">(Λ)CORDIAN</h1>
