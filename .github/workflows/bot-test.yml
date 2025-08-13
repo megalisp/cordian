@@ -1,7 +1,12 @@
-name: bot-test
-on:
-  push:
-  pull_request:
+# Workflow temporarily disabled due to ongoing OpenSSL (FFI?) issue:
+#
+#   SSL_get_peer_certificate: implementation not found
+#
+# ---
+#
+# on:
+#   push:
+#   pull_request:
 
 jobs:
   test-bot:
