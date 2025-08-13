@@ -19,4 +19,4 @@ jobs:
           version: ${{ matrix.racket-version }}
       - run: raco pkg install --deps search-auto
       - run: raco setup cordian
-  - run: raco test cordian/test.rkt
+      - run: raco test test.rkt
