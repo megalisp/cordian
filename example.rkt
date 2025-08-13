@@ -4,18 +4,13 @@
 (require "main.rkt")
 ;;(require cordian)
 
-
-;; Use a dummy token if BOT_TOKEN is not set, for testing
-(define bot-token (or (getenv "BOT_TOKEN") "DUMMY_TOKEN_FOR_TESTING"))
-
-
 (define bot-client
   (bot #:startup-message #( "Hello! Welcome to the example bot for Cordian"
                             "This bot requires you to do a few things to try it out."
                             "1. You need to make sure you set the BOT_TOKEN environment"
                             "2. You need to well... have Racket in your path / installed lol"
                             "3. You need to make sure example.rkt is executable then ./example.rkt")
-       #:token bot-token ;; You should never store this in you code / repo. 
+       #:token (getenv "BOT_TOKEN") ;; You should never store this in you code / repo. 
        #:intents (list intent-guilds
                        intent-guild-messages
                        intent-message-content
