@@ -12,7 +12,6 @@
   "context.rkt"
   "api.rkt"
   "helpers.rkt"
-  "quirky.rkt"
   "debug.rkt")
 
 (provide
@@ -23,7 +22,6 @@
   (all-from-out "context.rkt")
   (all-from-out "api.rkt")
   (all-from-out "helpers.rkt")
-  (all-from-out "quirky.rkt")
   (all-from-out "debug.rkt")
   (all-from-out racket-cord)
   (all-defined-out))
