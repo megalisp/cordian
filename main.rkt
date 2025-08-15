@@ -10,6 +10,7 @@
   "event.rkt"
   "utils.rkt"
   "context.rkt"
+  "rec.rkt"
   "api.rkt"
   "helpers.rkt"
   "debug.rkt")
@@ -23,6 +24,7 @@
   (all-from-out "api.rkt")
   (all-from-out "helpers.rkt")
   (all-from-out "debug.rkt")
+  (all-from-out "rec.rkt")
   (all-from-out racket-cord)
   (all-defined-out))
 

@@ -1,3 +1,7 @@
 compiled/
 **/compiled/
 doc/
+
+# Ignore all .rec files except rec.rkt
+*.rec
+!rec.rkt
